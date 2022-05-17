@@ -1,0 +1,38 @@
+Tombol Login:
+begin
+  with login_zq do
+  begin
+    SQL.Clear;
+    SQL.Add('select * from akun_penumpang where username=' + QuotedStr(Edit1.Text));
+    Open;
+  end;
+  if login_zq.RecordCount = 0 then
+    Application.MessageBox('Maaf username atau password tidak ditemukan', 'Informasi', MB_OK or MB_ICONINFORMATION)
+  else
+  begin
+    if login_zq.FieldByName('password').AsString <> Edit2.Text then
+      Application.MessageBox('Password Salah', 'Error', MB_OK or MB_ICONERROR)
+    else
+    begin
+      Form1.Hide;
+      Form2.Show;
+    end;
+  end;
+end;
+
+Checkbox;
+begin
+  if CheckBox1.checked then
+    Edit2.PasswordChar := #0
+  else
+    Edit2.PasswordChar := '*'
+end;
+
+Button Exit:
+begin
+  if (Application.MessageBox('Are you sure?', 'Confirm', MB_OKCANCEL) = ID_OK)
+    then
+  begin
+    close;
+  end;
+end;

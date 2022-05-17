@@ -1,0 +1,4 @@
+Tambah staff (admin) untuk mengatur tiket
+Hilangkan atribut (karena atribut di TRD)
+
+Isi laporan ada latar belakang, dll
