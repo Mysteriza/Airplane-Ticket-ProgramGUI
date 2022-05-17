@@ -1,3 +1,1 @@
-# Airplane_ticket_ProgramGUI
-# Airplane_Ticket_ProgramGUI
-# Airplane_Ticket_ProgramGUI
+Ini adalah program transaksi tiket pesawat bahasa pascal, program ini sudah disertai GUI dan database yang bisa digunakan.
